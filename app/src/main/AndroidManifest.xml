@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.twixt.pranav.pos">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".KassieApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:resizeableActivity="false"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="b04d55e8bedb045c69398bb36aafb7e1af3820ce" />
+
+        <service android:name=".Controller.Firebase.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Controller.Firebase.FirebaseIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0"
+            tools:replace="android:value" />
+
+        <activity
+            android:name=".View.Activity.SplashScreen"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".View.Activity.Activation"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:noHistory="true"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.Activity.Login"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:noHistory="true"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.Activity.Home"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.Activity.Cart"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:noHistory="true" />
+        <activity
+            android:name=".View.Activity.Items"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.Activity.Payment"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.Popup_theme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.Activity.Receipts"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:noHistory="true" />
+        <activity
+            android:name=".View.Activity.PaymentSplit"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/AppTheme.Popup_theme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.Activity.Pin"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:noHistory="true" />
+        <activity
+            android:name=".View.Activity.PinRestart"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:noHistory="true" />
+        <activity
+            android:name=".View.Activity.Refund"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:noHistory="true" />
+        <activity
+            android:name=".View.Activity.RefundItems"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:noHistory="true" />
+        <activity
+            android:name=".View.Activity.Settings"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:noHistory="true" />
+        <activity
+            android:name=".View.Activity.ErrorPage"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:noHistory="true" />
+        <activity
+            android:name=".View.Activity.PayLaterList"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity
+            android:name=".View.Activity.PaylaterOrders"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity
+            android:name=".View.Activity.ViewPayLaterItems"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity
+            android:name=".View.Activity.Print"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity
+            android:name=".View.Activity.PaymentForLater"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.Popup_theme" />
+        <activity
+            android:name=".View.Activity.Modifier"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/AppTheme.Popup_theme" />
+        <activity
+            android:name=".View.Activity.Notification_activity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity
+            android:name=".View.Activity.Calculation"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.Popup_theme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.Activity.CalculationPayLater"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.Popup_theme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".View.Activity.Test"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity
+            android:name=".View.Activity.CalculationSplit"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+    </application>
+
+</manifest>

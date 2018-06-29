@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:splitMotionEvents="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/backgrount_primary"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="?android:attr/actionBarSize"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="15dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/r_amount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|end"
+            android:paddingRight="10dp"
+            android:text="Remaning Amount"
+            android:textColor="@color/text_white"
+            android:textSize="20sp" />
+
+        <!--<TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Payment"
+            android:textColor="@color/text_white"
+            android:textSize="22sp"
+            android:visibility="gone" />-->
+
+        <TextView
+            android:id="@+id/remaning_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:text="500.00"
+            android:textColor="@color/text_white"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawableLeft="@drawable/ic_minus"
+                android:drawablePadding="30dp"
+                android:drawableRight="@drawable/ic_add"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="2"
+                android:textColor="@color/text_black"
+                android:textSize="30sp" />
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_a1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:elevation="10dp">
+
+                <Spinner
+                    android:id="@+id/card_type_a1"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dp"
+                    android:layout_toLeftOf="@+id/delete_a1"
+                    android:layout_toRightOf="@+id/paying_amounts_a1"
+                    android:background="@drawable/stroke_edit_text" />
+
+                <ImageButton
+                    android:id="@+id/delete_a1"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/pay_a1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_delete"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/paying_amounts_a1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/card_type_a1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/pay_a1"
+                    android:background="@drawable/stroke_edit_text"
+                    android:gravity="right|center"
+                    android:hint="00.00"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+
+                <Button
+                    android:id="@+id/pay_a1"
+                    style="@style/button_primary_margin40"
+                    android:layout_width="105dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/card_type_a1"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="15dp"
+                    android:text="0k"
+                    android:textAllCaps="false" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_a2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:elevation="10dp">
+
+                <Spinner
+                    android:id="@+id/card_type_a2"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dp"
+                    android:layout_toLeftOf="@+id/delete_a2"
+                    android:layout_toRightOf="@+id/paying_amounts_a2"
+                    android:background="@drawable/stroke_edit_text" />
+
+                <ImageButton
+                    android:id="@+id/delete_a2"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/pay_a2"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_delete"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/paying_amounts_a2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/card_type_a2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/pay_a2"
+                    android:background="@drawable/stroke_edit_text"
+                    android:gravity="right|center"
+                    android:hint="00.00"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+
+                <Button
+                    android:id="@+id/pay_a2"
+                    style="@style/button_primary_margin40"
+                    android:layout_width="105dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/card_type_a2"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="15dp"
+                    android:text="0k"
+                    android:textAllCaps="false" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_a3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:elevation="10dp"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/card_type_a3"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dp"
+                    android:layout_toLeftOf="@+id/delete_a3"
+                    android:layout_toRightOf="@+id/paying_amounts_a3"
+                    android:background="@drawable/stroke_edit_text" />
+
+                <ImageButton
+                    android:id="@+id/delete_a3"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/pay_a3"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_delete"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/paying_amounts_a3"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/card_type_a3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/pay_a3"
+                    android:background="@drawable/stroke_edit_text"
+                    android:gravity="right|center"
+                    android:hint="00.00"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+
+                <Button
+                    android:id="@+id/pay_a3"
+                    style="@style/button_primary_margin40"
+                    android:layout_width="105dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/card_type_a3"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="15dp"
+                    android:text="0k"
+                    android:textAllCaps="false" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_a4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:elevation="10dp"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/card_type_a4"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dp"
+                    android:layout_toLeftOf="@+id/delete_a4"
+                    android:layout_toRightOf="@+id/paying_amounts_a4"
+                    android:background="@drawable/stroke_edit_text" />
+
+                <ImageButton
+                    android:id="@+id/delete_a4"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/pay_a4"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_delete"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/paying_amounts_a4"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/card_type_a4"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/pay_a4"
+                    android:background="@drawable/stroke_edit_text"
+                    android:gravity="right|center"
+                    android:hint="00.00"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+
+                <Button
+                    android:id="@+id/pay_a4"
+                    style="@style/button_primary_margin40"
+                    android:layout_width="105dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/card_type_a4"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="15dp"
+                    android:text="0k"
+                    android:textAllCaps="false" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_a5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:elevation="10dp"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/card_type_a5"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dp"
+                    android:layout_toLeftOf="@+id/delete_a5"
+                    android:layout_toRightOf="@+id/paying_amounts_a5"
+                    android:background="@drawable/stroke_edit_text" />
+
+                <ImageButton
+                    android:id="@+id/delete_a5"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/pay_a5"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_delete"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/paying_amounts_a5"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/card_type_a5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/pay_a5"
+                    android:background="@drawable/stroke_edit_text"
+                    android:gravity="right|center"
+                    android:hint="00.00"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+
+                <Button
+                    android:id="@+id/pay_a5"
+                    style="@style/button_primary_margin40"
+                    android:layout_width="105dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/card_type_a5"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="15dp"
+                    android:text="0k"
+                    android:textAllCaps="false" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_a6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:elevation="10dp"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/card_type_a6"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dp"
+                    android:layout_toLeftOf="@+id/delete_a6"
+                    android:layout_toRightOf="@+id/paying_amounts_a6"
+                    android:background="@drawable/stroke_edit_text" />
+
+                <ImageButton
+                    android:id="@+id/delete_a6"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/pay_a6"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_delete"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/paying_amounts_a6"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/card_type_a6"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/pay_a6"
+                    android:background="@drawable/stroke_edit_text"
+                    android:gravity="right|center"
+                    android:hint="00.00"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+
+                <Button
+                    android:id="@+id/pay_a6"
+                    style="@style/button_primary_margin40"
+                    android:layout_width="105dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/card_type_a6"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="15dp"
+                    android:text="0k"
+                    android:textAllCaps="false" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_a7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:elevation="10dp"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/card_type_a7"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dp"
+                    android:layout_toLeftOf="@+id/delete_a7"
+                    android:layout_toRightOf="@+id/paying_amounts_a7"
+                    android:background="@drawable/stroke_edit_text" />
+
+                <ImageButton
+                    android:id="@+id/delete_a7"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/pay_a7"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_delete"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/paying_amounts_a7"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/card_type_a7"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/pay_a7"
+                    android:background="@drawable/stroke_edit_text"
+                    android:gravity="right|center"
+                    android:hint="00.00"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+
+                <Button
+                    android:id="@+id/pay_a7"
+                    style="@style/button_primary_margin40"
+                    android:layout_width="105dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/card_type_a7"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="15dp"
+                    android:text="0k"
+                    android:textAllCaps="false" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_a8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:elevation="10dp"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/card_type_a8"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dp"
+                    android:layout_toLeftOf="@+id/delete_a8"
+                    android:layout_toRightOf="@+id/paying_amounts_a8"
+                    android:background="@drawable/stroke_edit_text" />
+
+                <ImageButton
+                    android:id="@+id/delete_a8"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/pay_a8"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_delete"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/paying_amounts_a8"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/card_type_a8"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/pay_a8"
+                    android:background="@drawable/stroke_edit_text"
+                    android:gravity="right|center"
+                    android:hint="00.00"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+
+                <Button
+                    android:id="@+id/pay_a8"
+                    style="@style/button_primary_margin40"
+                    android:layout_width="105dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/card_type_a8"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="15dp"
+                    android:text="0k"
+                    android:textAllCaps="false" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_a9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:elevation="10dp"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/card_type_a9"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dp"
+                    android:layout_toLeftOf="@+id/delete_a9"
+                    android:layout_toRightOf="@+id/paying_amounts_a9"
+                    android:background="@drawable/stroke_edit_text" />
+
+                <ImageButton
+                    android:id="@+id/delete_a9"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/pay_a9"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_delete"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/paying_amounts_a9"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/card_type_a9"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/pay_a9"
+                    android:background="@drawable/stroke_edit_text"
+                    android:gravity="right|center"
+                    android:hint="00.00"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+
+                <Button
+                    android:id="@+id/pay_a9"
+                    style="@style/button_primary_margin40"
+                    android:layout_width="105dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/card_type_a9"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="15dp"
+                    android:text="0k"
+                    android:textAllCaps="false" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_a10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:elevation="10dp"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/card_type_a10"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dp"
+                    android:layout_toLeftOf="@+id/delete_a10"
+                    android:layout_toRightOf="@+id/paying_amounts_a10"
+                    android:background="@drawable/stroke_edit_text" />
+
+                <ImageButton
+                    android:id="@+id/delete_a10"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/pay_a10"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_delete"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/paying_amounts_a10"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/card_type_a10"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/pay_a10"
+                    android:background="@drawable/stroke_edit_text"
+                    android:gravity="right|center"
+                    android:hint="00.00"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+
+                <Button
+                    android:id="@+id/pay_a10"
+                    style="@style/button_primary_margin40"
+                    android:layout_width="105dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/card_type_a10"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="15dp"
+                    android:text="0k"
+                    android:textAllCaps="false" />
+
+
+            </RelativeLayout>
+
+            <!--<android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_split"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1" />-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:minHeight="10dp" />
+
+            <Button
+                android:id="@+id/checkout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/primary_button"
+                android:text="Checkout"
+                android:textAllCaps="false"
+                android:textColor="@color/text_white"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

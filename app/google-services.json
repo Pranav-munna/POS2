@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "158581619540",
+    "firebase_url": "https://posfirebaseproject-6837d.firebaseio.com",
+    "project_id": "posfirebaseproject-6837d",
+    "storage_bucket": "posfirebaseproject-6837d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158581619540:android:562b72428f5e00c9",
+        "android_client_info": {
+          "package_name": "com.twixt.pranav.pos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "158581619540-u2qhjufilcfkr8g47c2ff1o220iccgas.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.twixt.pranav.pos",
+            "certificate_hash": "8c207f4cc8229a250d16a3825fc63f67e1035466"
+          }
+        },
+        {
+          "client_id": "158581619540-gm5cn42ocbd32ida0mlu2q3q1svlkpcf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDm8KgFQc3-9KMjRBvIPudZjQDB4ArWD3A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "158581619540-gm5cn42ocbd32ida0mlu2q3q1svlkpcf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

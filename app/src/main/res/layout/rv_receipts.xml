@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:splitMotionEvents="false"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="start|center"
+        android:paddingLeft="20dp"
+        android:text="Today"
+        android:textColor="@color/text_Primary"
+        android:textSize="20dp"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border_gray"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/colorss"
+            android:layout_width="58dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical"
+            android:padding="1dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_receipts" />
+
+        <TextView
+            android:id="@+id/cash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/time"
+            android:layout_toRightOf="@+id/colorss"
+            android:gravity="bottom"
+            android:textColor="@color/text_black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cash"
+            android:layout_toLeftOf="@+id/time"
+            android:layout_toRightOf="@+id/colorss"
+            android:gravity="center_vertical"
+            android:text="Cash"
+            android:textColor="@color/text_gray"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="00:00pm"
+            android:textColor="@color/text_black"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".3dp"
+            android:layout_alignEnd="@+id/time"
+            android:layout_alignParentBottom="true"
+            android:background="@color/shadow_lite" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/backgrount_white"
+    android:minWidth="300dp"
+    android:splitMotionEvents="false"
+    app:cardCornerRadius="28sp"
+    app:cardElevation="10dp"
+    app:cardPreventCornerOverlap="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="email :"
+            android:textColor="@color/text_black"
+            android:textSize="16dp" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tv_email"
+            android:gravity="start"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:scrollbars="horizontal"
+            android:textColor="@color/text_black"
+            android:textSize="16dp" />
+
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/button_primary_margin40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_email"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/btn_send"
+            android:text="Cancel"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_send"
+            style="@style/button_primary_margin40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/et_email"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Send"
+            android:textAllCaps="false" />
+
+        <View
+            android:id="@+id/viewz"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/btn_send"
+            android:background="@color/border_gray"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_print"
+            style="@style/button_primary_margin40"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/viewz"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="20dp"
+            android:text="Print Receipt"
+            android:textAllCaps="false"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_new_sale"
+            style="@style/button_primary_margin40"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/btn_print"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:text="New Sale"
+            android:textAllCaps="false"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

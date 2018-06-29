@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_r"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:splitMotionEvents="false"
+    android:background="@color/backgrount_white">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_vertical"
+        android:padding="15dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_receipts" />
+
+    <TextView
+        android:id="@+id/mail_id"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/amount"
+        android:layout_toRightOf="@+id/icon"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="pranavmunna@gmail.com"
+        android:textColor="@color/text_black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="kr. 100.0"
+        android:textColor="@color/text_black"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".3dp"
+        android:layout_alignEnd="@+id/amount"
+        android:layout_alignParentBottom="true"
+        android:background="@color/shadow_lite" />
+
+
+</RelativeLayout>

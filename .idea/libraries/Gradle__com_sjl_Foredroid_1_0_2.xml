@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.sjl:Foredroid-1.0.2">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/Foredroid-1.0.2.aar/577771ad70da064f4d83b1a017192986/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/Foredroid-1.0.2.aar/577771ad70da064f4d83b1a017192986/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sjl/Foredroid/1.0.2/6f4ee50153d92b9e5bc56a43f43d96e4ad7f4566/Foredroid-1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

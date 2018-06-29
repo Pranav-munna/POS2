@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:splitMotionEvents="false"
+    android:background="@color/backgrount_primary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/selection"
+            android:layout_width="?android:attr/actionBarSize"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="18dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_menu" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/search"
+            android:layout_toRightOf="@+id/selection"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="Sales"
+            android:textColor="@color/text_white"
+            android:textSize="22sp" />
+
+        <ImageButton
+            android:id="@+id/search"
+            android:layout_width="?android:attr/actionBarSize"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/cart"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_search" />
+
+        <EditText
+            android:id="@+id/search_et"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/cart"
+            android:layout_toRightOf="@+id/selection"
+            android:background="@drawable/button_payment_corners"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/cart"
+            android:layout_width="wrap_content"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:drawableLeft="@drawable/ic_drawable_cart"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="30dp"
+            android:text="6"
+            android:textColor="@color/text_white"
+            android:textSize="20sp" />
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:background="?android:attr/selectableItemBackground" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tablayout"
+            android:background="@color/backgrount_white" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_list_s"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:splitMotionEvents="false"
+            android:layout_below="@+id/tablayout"
+            android:background="@color/backgrount_white"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="phone"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgrount_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/backgrount_primary"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="30dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/ic_head" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Shopkeeper"
+                    android:textColor="@color/text_white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/sales"
+                style="@style/textview_add_text_drawables"
+                android:drawableLeft="@drawable/ic_drawable_sales_blue"
+                android:text="Sales"
+                android:textColor="@color/text_Primary" />
+
+            <TextView
+                android:id="@+id/receipts"
+                style="@style/textview_add_text_drawables"
+                android:drawableLeft="@drawable/ic_drawable_receipts"
+                android:drawableTint="@color/text_gray"
+                android:text="Receipts" />
+
+
+            <TextView
+                android:id="@+id/pay_later"
+                style="@style/textview_add_text_drawables"
+                android:drawableLeft="@drawable/ic_drawable_pay_later"
+                android:drawableTint="@color/text_gray"
+                android:text="Pay Later" />
+
+            <TextView
+                android:id="@+id/settings"
+                style="@style/textview_add_text_drawables"
+                android:drawableLeft="@drawable/ic_drawable_settings"
+                android:drawableTint="@color/text_gray"
+                android:text="Settings" />
+
+            <TextView
+                android:id="@+id/logout"
+                style="@style/textview_add_text_drawables"
+                android:drawableLeft="@drawable/ic_drawable_logout"
+                android:drawableTint="@color/text_gray"
+                android:text="Logout" />
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/app_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="v.n.1.0" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/backgrount_white"
+    android:minWidth="300dp"
+    android:splitMotionEvents="false"
+    app:cardCornerRadius="28sp"
+    app:cardElevation="10dp"
+    app:cardPreventCornerOverlap="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/btn_Pay_now"
+            style="@style/button_primary_margin40"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/et_email"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@+id/btn_cancel"
+            android:text="Pay now"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_pay_later"
+            style="@style/button_primary_margin40"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/et_email"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Pay later"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

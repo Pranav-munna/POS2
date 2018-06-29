@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:splitMotionEvents="false"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="Activation"
+        android:textColor="@color/text_white"
+        android:textSize="22sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".8" />
+
+    <EditText
+        android:id="@+id/app_id"
+        style="@style/edit_text_margin40"
+        android:hint="APP ID"/>
+
+    <EditText
+        android:id="@+id/key"
+        style="@style/edit_text_margin40"
+        android:layout_marginTop="15dp"
+        android:hint="KEY"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/activate"
+        style="@style/button_primary_margin40"
+        android:text="ACTIVATE" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".3" />
+</LinearLayout>

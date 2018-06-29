@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cartLabel"
+    android:layout_width="wrap_content"
+    android:layout_height="?android:attr/actionBarSize"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentTop="true"
+    android:clickable="true"
+    android:drawableLeft="@drawable/ic_drawable_cart"
+    android:drawablePadding="10dp"
+    android:gravity="center_vertical"
+    android:paddingLeft="8dp"
+    tools:text=""
+    android:paddingRight="30dp"
+    android:textColor="@color/text_white"
+    android:textSize="20sp"/>
+
+    <!--android:drawableLeft="@drawable/ic_drawable_cart"-->
